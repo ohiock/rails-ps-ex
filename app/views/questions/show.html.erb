@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="lead">
+    <%= render 'home/new_answer_form' %>
+    <% @answers.each do |answer| %>
+      <br>
+      <div class="media">
+        <img class="mr-3" src="<%= answer.gravatar %>" alt="Generic placeholder image">
+        <div class="media-body">
+          <h5 class="mt-0"><%= answer.email %> answered:</h5>
+          <div><%= time_ago_in_words(answer.created_at) %></div>
+          <%= answer.body %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <br>
+  <div>
+    <button type="button" data-toggle="modal" data-target="#new-answer-modal" class="btn btn-success">Submit new answer</button>
+  </div>
+</div>
