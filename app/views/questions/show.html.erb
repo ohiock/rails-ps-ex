@@ -1,5 +1,6 @@
 <div class="container">
   <div class="lead">
+    <br>
     <%= render 'home/new_answer_form' %>
     <% @answers.each do |answer| %>
       <br>
@@ -11,6 +12,9 @@
           <%= answer.body %>
         </div>
       </div>
+    <% end %>
+    <% if @answers.empty? %>
+      <div class="alert alert-info">Nothing here yet, be the first to answer?</div>
     <% end %>
   </div>
   <br>
