@@ -1,3 +1,31 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.boxes {
+  .media {
+    border: thin solid #dddddd;
+    padding: 1em;
+    border-radius: 10px;
+    background: #eee;
+    position: relative;
+
+    &:hover {
+      cursor: pointer;
+      background: #ddd;
+    }
+
+    .time {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      color: #666;
+    }
+
+    .answer-button {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+    }
+  }
+}
